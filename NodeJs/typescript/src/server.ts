@@ -1,9 +1,8 @@
 import express from "express";
+import { createCouse } from "./routes";
 
 const app = express();
 
-app.get("/", (request, response) => {
-  return response.json({ message: "Hello World." });
-});
+app.get("/", createCouse);
 
 app.listen(3333);
